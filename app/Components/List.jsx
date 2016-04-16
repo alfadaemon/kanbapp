@@ -7,6 +7,7 @@ class List extends Component {
             (card) => {
                 return(
                     <Card
+                        key={card.id}
                         id={card.id}
                         title={card.title}
                         description={card.description}
@@ -18,7 +19,7 @@ class List extends Component {
 
         return(
             <div className="list">
-                <h1>{this.props.title}</h1>
+                {this.props.title}
                 {cards}
             </div>
         )

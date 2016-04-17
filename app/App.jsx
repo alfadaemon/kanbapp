@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import {render} from 'react-dom';
+import React, { Component } from 'react'
+import {render} from 'react-dom'
+import marked from 'marked'
 
 import KanbanBoard from './Components/KanbanBoard.jsx'
 
@@ -7,13 +8,14 @@ let cardsList = [
     {
         id: 1,
         title: "Read the Book",
-        description: "I should read the whole book",
+        description: "I should read the **whole** book",
+        color: '#BD8D31',
         status: "in-progress",
         tasks: [
             {
                 id: 4,
                 name: 'Read Chapter 1',
-                done: false
+                done: true
             },
             {
                 id: 5,
@@ -26,16 +28,17 @@ let cardsList = [
         id: 4,
         title: "Read the Book",
         description: "I should read the whole book",
+        color: '#3A7E28',
         status: "in-progress",
         tasks: [
             {
                 id: 7,
-                name: 'Read Chapter 1',
+                name: 'Read Chapter 3',
                 done: false
             },
             {
                 id: 8,
-                name: 'Read Chapter 2',
+                name: 'Read Chapter 4',
                 done: false
             }
         ]
@@ -43,7 +46,9 @@ let cardsList = [
     {
         id: 2,
         title: "Write some code",
-        description: "Code along with the samples in the book",
+        description: "Code along with the samples in the book. The complete source can be found at" +
+        " [github](https://github.com/pro-react)",
+        color: '#3A7E28',
         status: "todo",
         tasks: [
             {
@@ -66,6 +71,7 @@ let cardsList = [
         id: 3,
         title: "Get the Book",
         description: "I should get the book from the internet?",
+        color: '#BD8D31',
         status: "done",
         tasks: [
             {

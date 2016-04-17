@@ -38,6 +38,7 @@ ul {
     height: 99%;
     background: linear-gradient(to bottom, #eee 0%, #ccc 50%, #eee 100%) fixed;
 }
+
 .card {
     position: relative;
     z-index: 1;
@@ -72,4 +73,11 @@ ul {
 .checklist__task--remove:after{ display: inline-block;
     color: #d66;
     content: "x";
+}
+.checklist--add-task {
+    border: 1px dashed #bbb;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
 }
